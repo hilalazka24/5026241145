@@ -43,5 +43,9 @@ Route::get('linktree', function () {
 	return view('linktree');
 });
 
+Route::get('menu', function () {
+	return view('portal');
+});
+
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
