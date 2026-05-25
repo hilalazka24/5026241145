@@ -27,7 +27,7 @@ class PegawaiDBController extends Controller
     		// mengirim data pegawai ke view index
 		return view('index',['pegawai' => $pegawai]);
 
-	}
+	} 
     // method untuk menampilkan view form tambah pegawai
 	public function tambah()
 	{
