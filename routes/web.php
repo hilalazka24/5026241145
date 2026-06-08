@@ -5,6 +5,7 @@ use App\Http\Controllers\DosenController ;
 use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
+use App\Http\Controllers\keranjangController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -52,13 +53,8 @@ Route::get('menu', function () {
 
 Route::get('dosen', [DosenController::class, 'index']);
 Route::get('biodata', [DosenController::class, 'biodata']);
-Route::get('/formulir', [PegawaiController::class, 'formulir']);
-Route::post('/formulir/proses', [PegawaiController::class, 'proses']);
-Route::get('/blog', [BlogController::class, 'home']);
-Route::get('/blog/tentang', [BlogController::class, 'tentang']);
-Route::get('/blog/kontak', [BlogController::class, 'kontak']);
 
-//ROUTE CRUD
+//ROUTE CRUD pegawai
 Route::get('/pegawai', [PegawaiDBController::class, 'index']);
 Route::get('/pegawai/tambah', [PegawaiDBController::class, 'tambah']);
 Route::post('/pegawai/store', [PegawaiDBController::class, 'store']);
@@ -66,3 +62,8 @@ Route::get('/pegawai/edit/{id}', [PegawaiDBController::class, 'edit']);
 Route::post('/pegawai/update', [PegawaiDBController::class, 'update']);
 Route::get('/pegawai/hapus/{id}', [PegawaiDBController::class, 'hapus']);
 Route::get('/pegawai/cari', [PegawaiDBController::class, 'cari']);
+
+Route::get('/keranjangbelanja', [keranjangController::class, 'index_keranjang']);
+Route::get('/keranjangbeli/{id}', [keranjangController::class, 'beli']);
+Route::post('/keranjangstore', [keranjangController::class, 'storeKeranjang']);
+Route::get('/keranjangbatal/{id}', [keranjangController::class, 'batal']);
