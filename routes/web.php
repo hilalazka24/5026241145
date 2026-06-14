@@ -6,6 +6,7 @@ use App\Http\Controllers\PegawaiController;
 use App\Http\Controllers\BlogController;
 use App\Http\Controllers\PegawaiDBController;
 use App\Http\Controllers\keranjangController;
+use App\Http\Controllers\BankController;
 
 Route::get('/', function () {
     return view('welcome');
@@ -67,3 +68,12 @@ Route::get('/keranjangbelanja', [keranjangController::class, 'index_keranjang'])
 Route::get('/keranjangbeli/{id}', [keranjangController::class, 'beli']);
 Route::post('/keranjangstore', [keranjangController::class, 'storeKeranjang']);
 Route::get('/keranjangbatal/{id}', [keranjangController::class, 'batal']);
+
+// CRUD table kabel (Adaptasi dari pegawai)
+Route::get('/bank', [BankController::class, 'index']);
+Route::get('/bank/tambah', [BankController::class, 'tambah']);
+Route::post('/bank/store', [BankController::class, 'store']);
+Route::get('/bank/edit/{id}', [BankController::class, 'edit']);
+Route::post('/bank/update', [BankController::class, 'update']);
+Route::get('/bank/hapus/{id}', [BankController::class, 'hapus']);
+Route::get('/bank/cari', [BankController::class, 'cari']);
