@@ -13,7 +13,7 @@ class BankController extends Controller
     	//$pegawai = DB::table('pegawai')->get(); //jika tampilan hasil bukan pagination
 		$bank = DB::table('bank')->paginate(10);
     	// mengirim data bank ke view index
-    	return view('indexbank',['bank' => $bank]);
+    	return view('bank_index',['bank' => $bank]);
 
 
     }
@@ -22,7 +22,7 @@ class BankController extends Controller
 	{
 
 		// memanggil view tambah
-		return view('tambahbank');
+		return view('bank_create');
 
 	}
 
@@ -46,7 +46,7 @@ class BankController extends Controller
 		// mengambil data bank berdasarkan id yang dipilih
 		$bank = DB::table('bank')->where('kodebank',$id)->get();
 		// passing data bank yang didapat ke view edit.blade.php
-		return view('editbank',['bank' => $bank]);
+		return view('bank_edit',['bank' => $bank]);
 
 	}
 
@@ -80,6 +80,6 @@ class BankController extends Controller
 		->where('merkbank','like',"%".$cari."%")
 		->paginate();
 
-		return view('indexbank',['bank' => $bank]);
+		return view('bank_index',['bank' => $bank]);
 	}
 }

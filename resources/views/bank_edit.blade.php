@@ -27,7 +27,7 @@
                 <div class="row mb-3">
                     <label for="jumlah" class="col-sm-2 col-form-label">Jumlah Bank</label>
                     <div class="col-sm-10">
-                        <input type="number" name="jumlah" id="jumlah" class="form-control" required value="{{ $b->jumlah }}">
+                        <input type="number" name="jumlah" id="jumlah" class="form-control" required value="{{ $b->jumlahbank }}">
                     </div>
                 </div>
 

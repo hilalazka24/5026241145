@@ -3,15 +3,13 @@
 
 @section('title', 'Data Keranjang')
 @section('konten')
-    <center>
+    <<i class="fa fa-align-left" aria-hidden="true"> </i>>
+        <h2>Data Belanja</h2>
+        @if (session('success'))
+            <p style="color: green;">{{ session('success') }}</p>
+        @endif
         <br />
         <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-
         <table class="table table-striped table-hover">
             <tr>
                 <th>Kode Pembelian</th>
@@ -38,6 +36,6 @@
             @endforeach
         </table>
 
-    </center>
+        </center>
 
-@endsection
+    @endsection

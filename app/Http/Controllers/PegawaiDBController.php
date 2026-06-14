@@ -12,7 +12,7 @@ class PegawaiDBController extends Controller
     	// mengambil data dari table pegawai
         $pegawai = DB::table('pegawai')->paginate(10);
     	// mengirim data pegawai ke view index
-    	return view('index',['pegawai' => $pegawai]);
+    	return view('pegawai_index',['pegawai' => $pegawai]);
     }
     	public function cari(Request $request)
 	{
@@ -25,15 +25,15 @@ class PegawaiDBController extends Controller
 		->paginate();
 
     		// mengirim data pegawai ke view index
-		return view('index',['pegawai' => $pegawai]);
+		return view('pegawai_index',['pegawai' => $pegawai]);
 
 	}
     // method untuk menampilkan view form tambah pegawai
-	public function tambah() 
+	public function tambah()
 	{
 
 		// memanggil view tambah
-		return view('tambah');
+		return view('pegawai_tambah');
 
 	}
 
@@ -58,7 +58,7 @@ class PegawaiDBController extends Controller
 		// mengambil data pegawai berdasarkan id yang dipilih
 		$pegawai = DB::table('pegawai')->where('pegawai_id',$id)->get();
 		// passing data pegawai yang didapat ke view edit.blade.php
-		return view('edit',['pegawai' => $pegawai]);
+		return view('pegawai_edit',['pegawai' => $pegawai]);
 
 	}
 

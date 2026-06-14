@@ -15,20 +15,20 @@ class keranjangController extends Controller
         $keranjang = DB::table('keranjangbelanja')->get();
 
     	// mengirim data pegawai ke view index
-    	return view('index_keranjang', ['keranjang' => $keranjang]);
+    	return view('keranjang_index', ['keranjang' => $keranjang]);
 
     }
 
-    // method untuk menampilkan view form tambah pegawai
+    // method untuk menampilkan view form tambah
 	public function beli()
 	{
 
 		// memanggil view tambah
-		return view('keranjangbeli');
+		return view('keranjang_create');
 
 	}
 
-	// method untuk insert data ke table pegawai
+	// method untuk insert data ke table
 	public function storeKeranjang(Request $request)
 	{
 		// insert data ke table pegawai
