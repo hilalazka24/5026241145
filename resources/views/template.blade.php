@@ -28,11 +28,13 @@
                         <a class="nav-link" href="/bank">Bank</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">PR 2</a>
+                        <a class="nav-link" href="/siswa">Siswa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/keranjangbelanja">P 15</a>
+                        <a class="nav-link" href="/keranjangbelanja">P15 Data Keranjang</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/nilai">P15 Nilai Kuliah</a>
                     <li class="nav-item">
                         <a class="nav-link" href="#">EAS</a>
                     </li>
