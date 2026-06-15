@@ -10,7 +10,7 @@ class PesertaController extends Controller
     // Menampilkan semua data dengan pagination
     public function index()
     {
-        $peserta = DB::table('nilai_peserta')->get(); // paginate agar links() berfungsi
+        $peserta = DB::table('nilai_peserta')->paginate(10); // paginate agar links() berfungsi
         return view('peserta_index', compact('peserta'));
     }
 
