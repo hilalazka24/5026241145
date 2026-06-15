@@ -8,7 +8,7 @@
             Form Tambah Data Peserta
         </div>
         <div class="card-body">
-            <form action="/eas/store" method="post">
+            <form action="/eas/tambah" method="post">
                 {{ csrf_field() }}
 
                 <div class="row mb-3">
